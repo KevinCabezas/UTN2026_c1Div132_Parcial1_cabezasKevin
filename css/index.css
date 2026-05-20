@@ -1,3 +1,12 @@
+:root {
+    --color-precios: #ca9013;
+    --color-descripcion: #808080;
+    --bg-primario: #000000;
+}
+
+
+
+
 /* --- Estilos generales --- */
 * {
     margin: 0;
@@ -8,6 +17,7 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-optical-sizing: auto;
+    background: #161616;
 }
 
 ul {
@@ -23,15 +33,16 @@ header {
     display: flex;
     padding: 10px 20px;
     box-shadow: 0 2px 5px #0000001a;
+    background: var(--bg-primario);
 }
 
 #icono-principal {
-    width: 190px;
+    width: 50px;
 }
 
 #titulo-principal {
     color: white;
-    font-size: 28px;
+    font-size: 29px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,18 +86,36 @@ a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 25px;
+    margin:  20px;
+    /* background-color: beige; */
+    /* justify-content: start; */
 }
 
 .li-hamburguesa,
 .li-bebida,
 .li-tragos {
-    background-color: brown;
+    background-color: var(--bg-primario);
     color: white;
     width: 250px;
+    padding: 15px;
+    border-radius: 15px;
 }
 
+
+.li-hamburguesa:hover,
+.li-bebida:hover,
+.li-tragos:hover  {
+
+    background-color: white;
+    color: #161616;
+    transition: all 0.3s;
+}
 .img-producto {
-    width: 100px;
+    width: 220px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .nombre-producto {
@@ -99,20 +128,22 @@ a:hover {
 .precio-producto{
     font-weight: 600;
     margin-bottom: 10px;
+    color: var(--color-precios);
 }
 
 .descripcion-producto {
     min-height: 110px;
     max-height: 110px;
+    color: var(--color-descripcion);
 }
 
 .btn-sumar-a-carrito {
     padding: 5px;
     margin-top: 15px;
-    background-color: green;
-    border-radius: 8px;
+    background-color: rgb(119, 231, 119);
+    border-radius: 5px;
     border: none;
-    width: 25px;
+    width: 50px;
     color: white;
     cursor: pointer;
 }
@@ -120,10 +151,10 @@ a:hover {
 .btn-restar-a-carrito {
     padding: 5px;
     margin-top: 15px;
-    background-color: red;
-    border-radius: 8px;
+    background-color: var(--color-precios);
+    border-radius: 5px;
     border: none;
-    width: 25px;
+    width: 50px;
     color: white;
     cursor: pointer;
 }
@@ -133,4 +164,5 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 13px;
+    background: var(--bg-primario);
 }
